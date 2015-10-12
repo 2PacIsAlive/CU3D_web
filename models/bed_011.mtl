@@ -1,0 +1,45 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl _Color_D20_1
+Ka 0.000000 0.000000 0.000000
+Kd 0.886275 0.894118 0.819608
+Ks 0.330000 0.330000 0.330000
+
+newmtl M_1___Default1
+Ka 0.000000 0.000000 0.000000
+Kd 0.874510 0.894118 0.827451
+Ks 0.330000 0.330000 0.330000
+map_Kd bed_011/M_1___Default1.jpg
+
+newmtl Textile_Rug_Navy
+Ka 0.000000 0.000000 0.000000
+Kd 0.137255 0.207843 0.321569
+Ks 0.330000 0.330000 0.330000
+map_Kd bed_011/Textile_Rug_Navy.jpg
+
+newmtl Diospyros_mespiliformis__Benin_or_Benin_Ebony__Ebanacees
+Ka 0.000000 0.000000 0.000000
+Kd 0.231373 0.207843 0.149020
+Ks 0.330000 0.330000 0.330000
+map_Kd bed_011/Diospyros_mespiliformis__Benin_or_Benin_Ebony__Ebanacees.jpg
+
+newmtl _0002_MediumVioletRed_5
+Ka 0.000000 0.000000 0.000000
+Kd 0.396078 0.400000 0.403922
+Ks 0.330000 0.330000 0.330000
+map_Kd bed_011/_0002_MediumVioletRed_5.jpg
+
+newmtl Textile_Stripes_Pastels
+Ka 0.000000 0.000000 0.000000
+Kd 0.788235 0.729412 0.701961
+Ks 0.330000 0.330000 0.330000
+map_Kd bed_011/Textile_Stripes_Pastels.jpg
+
+newmtl images__14_1
+Ka 0.000000 0.000000 0.000000
+Kd 0.600000 0.592157 0.545098
+Ks 0.330000 0.330000 0.330000
+map_Kd bed_011/images__14_1.jpg
+
