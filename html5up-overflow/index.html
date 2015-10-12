@@ -28,25 +28,76 @@
 
 		<!-- Banner -->
 			<section id="banner">
-				<header>
-					<h2>VRML files</h2>
-				</header>
+				<BODY onload="init()">
+				<div style="width:560px; margin:auto; position:relative; font-size: 9pt; color: #777777;">
+					<canvas id="cv" style="border: 0px solid;" width="560" height="420" ></canvas>
+					<div>
+					<select id="model_list">
+					<option>elephant_008.obj</option>
+					<option>guitar_010.obj</option>
+					<option>ptero.obj</option>
+					<option>tirarex.obj</option>
+					<option>parasau.obj</option>
+					</select>
+					<button id="load" onclick="loadModel();">Load</button>
+					</div>
+				</div>
+				<script type="text/javascript" src="jsc3d.js"></script>
+				<script type="text/javascript" src="jsc3d.touch.js"></script>
+				<script type="text/javascript">
+				var canvas;
+				var viewer;
+
+				function init() {
+					canvas = document.getElementById('cv');
+					viewer = new JSC3D.Viewer(canvas);
+					viewer.setParameter('SceneUrl', 'models/elephant_009.obj');
+					viewer.setParameter('InitRotationX', 0);
+					viewer.setParameter('InitRotationY', -30);
+					viewer.setParameter('InitRotationZ', 0);
+					viewer.setParameter('ModelColor', '#FFFFFF');
+					viewer.setParameter('BackgroundColor1', '#5C5C5C');
+					viewer.setParameter('BackgroundColor2', '#5C5C5C');
+					viewer.setParameter('RenderMode', 'texturesmooth');
+					viewer.setParameter('MipMapping', 'on');
+					viewer.init();
+					viewer.update();
+				}
+
+				function loadModel() {
+					var models = document.getElementById('model_list');
+					viewer.replaceSceneFromUrl('models/' + models[models.selectedIndex].innerHTML);
+					viewer.update();
+				}
+			  </script>
+			 </BODY>
 				<footer>
-					<a href="#first" class="button style2 scrolly">Renders</a>
+					<a target="_blank" href="https://drive.google.com/drive/u/0/folders/0B5fm0EKf71eEU3lKNWxfTThJUjA" class="button style2 scrolly">Download the entire dataset</a>
 				</footer>
 			</section>
 
 		<!-- Feature 1 -->
 			<article id="first" class="container box style1 right">
-				<a href="#" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
+				<a target="_blank" href="https://drive.google.com/drive/u/0/folders/0B5fm0EKf71eEU3lKNWxfTThJUjA" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
 				<div class="inner">
 					<header>
-						<h2>Lorem ipsum<br />
-						dolor sit amet</h2>
+						<h2>What's included</h2>
 					</header>
-					<p>Tortor faucibus ullamcorper nec tempus purus sed penatibus. Lacinia pellentesque eleifend vitae est elit tristique velit tempus etiam.</p>
+					<p>
+						<ul style="list-style-type:square">
+							<li>Over 1500 SketchUp models and VRML files</li>
+							<li>Individual renders of all models in several orientations</li>
+							<li>100 object categories</li>
+						</ul>
+<!--
+						<p>If you use this dataset, please cite: <br />
+						O'Reilly, R.C., Wyatte, D., Herd, S., Mingus, B., & Jilk, D. (2013). Recurrent processing during object recognition. Frontiers in Psychology, 4(124), 1-14.</p>
+-->
+					</p>
 				</div>
 			</article>
+
+
 
 		<!-- Feature 2 -->
 			<article class="container box style1 left">
@@ -104,6 +155,8 @@
 					</div>
 				</form>
 			</article>
+
+
 
 		<!-- Generic -->
 		<!--
